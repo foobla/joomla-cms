@@ -170,9 +170,9 @@ class MenusControllerItem extends JControllerForm
 		}
 		if ($data['type'] == 'url')
 		{
-			//var_dump($model);die;
 			$form->setFieldAttribute('link','filter','url');
 			$form->setFieldAttribute('link', 'validate','url');
+			$form->setFieldAttribute('link', 'relative', 'true');
 		}
 
 		$data = $model->validate($form, $data);
